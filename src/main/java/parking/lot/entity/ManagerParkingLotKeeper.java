@@ -10,6 +10,9 @@ public class ManagerParkingLotKeeper extends AbstractManager {
         this.manager = manager;
     }
 
+    public ManagerParkingLotKeeper() {
+    }
+
     public ManagerParkingLotKeeper(String p1, List<Park> parkList) {
         super.name = p1;
         super.parks = parkList;

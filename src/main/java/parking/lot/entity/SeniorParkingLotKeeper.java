@@ -5,6 +5,12 @@ import java.util.List;
 
 public class SeniorParkingLotKeeper extends AbstractManager {
 
+    public SeniorParkingLotKeeper(String name,List<Park> parks) {
+        super.name = name;
+        super.parks = parks;
+    }
+
+
     @Override
     public int parkingCar(Car car) {
         List<Park> parks = super.getParks();
