@@ -62,5 +62,7 @@ public class Step5Test {
         Car[] slot = park.getSlot();
         Assertions.assertEquals(slot[0].getCarNum(),car1.getCarNum());
 
+        System.out.println(parkManager);
+
     }
 }

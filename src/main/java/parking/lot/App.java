@@ -5,6 +5,7 @@ package parking.lot;
 
 import parking.lot.entity.Car;
 import parking.lot.entity.Park;
+import sun.java2d.pipe.SpanIterator;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
@@ -27,11 +28,7 @@ public class App {
 //         *
 //         */
 //        System.out.println("index:" + new App1().binarySearch(ints, 6));
-
-        Set<String> set = new HashSet<>();
-        set.add(null);
-        set.add(null);
-        System.out.println("size:" + set.size());
+        System.out.println(1699/12);
     }
 
     public int binarySearch(int[] source, int target) {
