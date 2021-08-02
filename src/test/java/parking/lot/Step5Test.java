@@ -20,9 +20,6 @@ public class Step5Test {
     @BeforeAll
     static void init() {
         parkManager = new ManagerParkingLotKeeper();
-        ParkManager parkManager1 = new ParkManager("停车场管理员1");
-        List<ParkManager> parkManagerList = new ArrayList<>();
-        parkManagerList.add(parkManager1);
     }
 
     @Test
