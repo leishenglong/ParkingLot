@@ -25,7 +25,7 @@ public class Step4Test {
 
     //step4 又又有一个高级停车场管理员，他管理多个停车场，他总是把车停在空位率最高的停车场
     @Test
-    void test() {
+    void given_twoParkingPlots_when_firstParkHasOneCar_then_parkingInTheSecondPark() {
         Car car = new Car("002");
         parkManager.parkingCar(car);
         List<Park> parks = parkManager.getParks();

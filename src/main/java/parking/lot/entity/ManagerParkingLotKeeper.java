@@ -6,6 +6,10 @@ public class ManagerParkingLotKeeper extends AbstractManager {
 
     private AbstractManager manager;
 
+    public AbstractManager getManager() {
+        return manager;
+    }
+
     public ManagerParkingLotKeeper(AbstractManager manager) {
         this.manager = manager;
     }
@@ -18,13 +22,18 @@ public class ManagerParkingLotKeeper extends AbstractManager {
         super.parks = parkList;
     }
 
+    public void setManager(AbstractManager manager) {
+        this.manager = manager;
+    }
+
     @Override
     public int parkingCar(Car car) {
-        int i = manager.parkingCar(car);
+        int i = super.parkingCar(car);
+
         if (i != -1) {
             return i;
         }
-        return super.parkingCar(car);
+        return manager.parkingCar(car);
     }
 
     @Override
