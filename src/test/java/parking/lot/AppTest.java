@@ -10,8 +10,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class AppTest {
     @Test
-    void appHasAGreeting() {
+    void appHasAGreeting() throws InterruptedException {
         App classUnderTest = new App();
         assertThat(classUnderTest.getGreeting()).isEqualTo("Hello world.");
+
+        Thread t = new Thread();
+        Runnable r = t;
+        t.join();
+
     }
 }

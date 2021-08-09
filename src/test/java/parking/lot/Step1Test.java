@@ -9,16 +9,38 @@ public class Step1Test {
 
     //    step1 要有车, 要有停车场, 能停车, 能取车
     @Test
-    void given_carandplot_when_parkingCar_then_pickupCar() throws Exception {
+    void given_carandplot_when_parkingCar_then_return_position() throws Exception {
         Park park = new Park(10, "park1");
-//        Park park1 = new Park(-1,"park1");
-        Assertions.assertNotNull(park);
         Car car = new Car("111");
-        Assertions.assertNotNull(car);
-        int i = park.parkingCar(car);
-        Assertions.assertNotEquals(i, -1);
-        int i1 = park.movingCar(car, i);
-        Assertions.assertNotEquals(i1, -1);
+        int position = park.parkingCar(car);
+        Assertions.assertEquals(0,position);
+    }
+
+    @Test
+    void given_carandplot_when_movingCar_then_return_parkedCar() throws Exception {
+        Park park = new Park(10, "park1");
+        Car car = new Car("111");
+
+        int position = park.parkingCar(car);
+
+        Car car1 = park.movingCar(position);
+
+        Assertions.assertEquals(car,car1);
 
     }
+
+    @Test
+    void given_carandplot_when_movingNotExistedCar_then_return_Null() throws Exception {
+        Park park = new Park(10, "park1");
+        Car car = new Car("111");
+
+        park.parkingCar(car);
+
+        Car car1 = park.movingCar(-1);
+
+        Assertions.assertNull(car1);
+
+    }
+
+
 }

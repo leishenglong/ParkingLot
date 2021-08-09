@@ -3,7 +3,7 @@ package parking.lot.entity;
 
 import java.util.List;
 
-public class ParkingLotKeeper extends AbstractManager {
+public class ParkingLotKeeper extends AbstractManager  {
 
 
     public ParkingLotKeeper(String p1, List<Park> parkList) {

@@ -5,7 +5,6 @@ package parking.lot;
 
 import parking.lot.entity.Car;
 import parking.lot.entity.Park;
-import sun.java2d.pipe.SpanIterator;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
@@ -50,8 +49,6 @@ public class App {
                 left = middle + 1;
             }
         }
-
         return middle;
-
     }
 }

@@ -8,8 +8,6 @@ public abstract class AbstractManager implements ManagerInterface {
     protected String name;
     protected List<Park> parks;//管理的停车场
 
-
-
     public void setName(String name) {
         this.name = name;
     }

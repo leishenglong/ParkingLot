@@ -86,23 +86,22 @@ public class Park {
 
     /**
      * 取车
-     *
-     * @param car
-     * @param index
+     * @param position
      * @return
      */
-    public int movingCar(Car car, int index) {
-        if (index < 0) {
-            return -1;
-        }
+    public Car movingCar(int position) {
+        if (position < 0) {
+            return null;
+        };
         for (int i = 0; i < slot.length; i++) {
-            if (index == i) {
+            if (position == i) {
+                Car car = slot[i];
                 slot[i] = null;
                 parkingSize--;
-                return i;
+                return car;
             }
         }
-        return -1;
+        return null;
     }
 
     @Override

@@ -19,12 +19,8 @@ public class ManagerParkingLotKeeper extends AbstractManager {
 
     @Override
     public int parkingCar(Car car) {
-        int i = super.parkingCar(car);
-
-        if (i != -1) {
-            return i;
-        }
-        return manager.parkingCar(car);
+        int i;
+        return (i = super.parkingCar(car)) == -1 ? manager.parkingCar(car) : i;
     }
 
     @Override
